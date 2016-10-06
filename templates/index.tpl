@@ -1,15 +1,8 @@
-<html>
-<head>
-    <title>Info</title>
-</head>
-<body>
+{include file="header.tpl" title="Info"}
 
-<pre>
-User Information:
+User Information:<p>
 
-Name: {$name}
-    Address: {$address}
-</pre>
+    Name: {$name|capitalize}<br>
+    Address: {$address|escape}<br>
 
-</body>
-</html>
+{include file="footer.tpl"}
