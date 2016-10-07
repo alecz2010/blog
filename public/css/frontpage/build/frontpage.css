@@ -1,10 +1,15 @@
 #container {
-  background-image: url("/blog/public/images/frontpage/header-bg-1.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: url("/blog/public/images/frontpage/header-bg-1.jpg") no-repeat;
+  background-size: 100% 550px;
   width: 100%;
-  height: 400px;
+  height: 550px;
   margin: 0;
   padding: 0; }
+  #container .navbar-inverse {
+    opacity: 0.8; }
+    #container .navbar-inverse a {
+      color: #ffffff; }
+    #container .navbar-inverse a:hover {
+      opacity: 0.3; }
 
 /*# sourceMappingURL=frontpage.css.map */

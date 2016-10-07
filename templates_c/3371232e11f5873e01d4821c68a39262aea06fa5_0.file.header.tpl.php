@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-10-07 14:17:57
+/* Smarty version 3.1.30, created on 2016-10-07 15:37:24
   from "C:\xampp\htdocs\blog\templates\header.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_57f792751aebd6_59301190',
+  'unifunc' => 'content_57f7a5147a4b65_13106809',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3371232e11f5873e01d4821c68a39262aea06fa5' => 
     array (
       0 => 'C:\\xampp\\htdocs\\blog\\templates\\header.tpl',
-      1 => 1475842676,
+      1 => 1475847443,
       2 => 'file',
     ),
   ),
@@ -20,16 +20,16 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_57f792751aebd6_59301190 (Smarty_Internal_Template $_smarty_tpl) {
+function content_57f7a5147a4b65_13106809 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <html>
 <head>
     <title><?php $_smarty_tpl->_assignInScope('title', "Blog");
 ?></title>
     <meta charset="utf-8" />
-    <link href="public/css/bootstrap.min.css" rel="stylesheet">
-    <link href="public/css/generic/_main.scss" rel="stylesheet">
-    <link href="public/css/frontpage/_container.scss" rel="stylesheet">
+    <link href="public/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="public/css/generic/build/generic.css" rel="stylesheet">
+    <link href="public/css/frontpage/build/frontpage.css" rel="stylesheet">
     <?php echo '<script'; ?>
  src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"><?php echo '</script'; ?>
 >
@@ -38,6 +38,7 @@ function content_57f792751aebd6_59301190 (Smarty_Internal_Template $_smarty_tpl)
 >
 </head>
 <body>
+<div id="container">
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -62,7 +63,6 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
             </ul>
         </div>
     </nav>
-    <div id="container">
-    </div>
+</div>
 <?php }
 }

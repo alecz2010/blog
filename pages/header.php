@@ -6,12 +6,8 @@
  * Time: 2:25 PM
  */
 
-$smarty = new Smarty;
+$smarty = new \Smarty();
 
-$smarty->assign('navBtn', array(
-    array('page' => 'Home' , 'url' => '/'),
-    array('page' => 'Contact', 'url' => '/contact'),
-    array('page' => 'Map', 'url' => '/map')
-    ));
+$smarty->assign($GLOBALS['config']->navMenu);
 
 $smarty->display('header.tpl');
