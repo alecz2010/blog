@@ -1,0 +1,10 @@
+#container {
+  background-image: url("/blog/public/images/frontpage/header-bg-1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 400px;
+  margin: 0;
+  padding: 0; }
+
+/*# sourceMappingURL=frontpage.css.map */

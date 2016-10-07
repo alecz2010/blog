@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,UAAW;EACT,gBAAgB,EAAE,oDAAoD;EACtE,eAAe,EAAE,KAAK;EACtB,iBAAiB,EAAE,SAAS;EAC5B,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,KAAK;EACb,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC",
+"sources": ["../src/_container.scss"],
+"names": [],
+"file": "frontpage.css"
+}
