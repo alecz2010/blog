@@ -1,8 +1,3 @@
-{include file="header.tpl" title="Info"}
-
-User Information:<p>
-
-    Name: {$name|capitalize}<br>
-    Address: {$address|escape}<br>
-
-{include file="footer.tpl"}
+<select name=user>
+    {html_options values=$id output=$names selected="5"}
+</select>
