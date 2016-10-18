@@ -6,9 +6,9 @@
  * Time: 5:19 PM
  */
 
-class mysql
+class DbManager
 {
-    public function connection()
+    public static function connection()
     {
         DEFINE('localhost','localhost');
         DEFINE('user','root');
@@ -21,7 +21,7 @@ class mysql
             die('Connect Error ' . mysqli_connect_errno()  . mysqli_connect_error());
         }
 
-        $connect->close();
+//        $connect->close();
         return $connect;
     }
 }

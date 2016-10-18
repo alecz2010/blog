@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-10-07 15:37:24
+/* Smarty version 3.1.30, created on 2016-10-18 16:22:35
   from "C:\xampp\htdocs\blog\templates\header.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_57f7a5147a4b65_13106809',
+  'unifunc' => 'content_5806302b15e366_39793063',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3371232e11f5873e01d4821c68a39262aea06fa5' => 
     array (
       0 => 'C:\\xampp\\htdocs\\blog\\templates\\header.tpl',
-      1 => 1475847443,
+      1 => 1476800554,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_57f7a5147a4b65_13106809 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5806302b15e366_39793063 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <html>
 <head>
@@ -35,6 +35,9 @@ function content_57f7a5147a4b65_13106809 (Smarty_Internal_Template $_smarty_tpl)
 >
     <?php echo '<script'; ?>
  src="public/js/bootstrap.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="public/js/ajax.js"><?php echo '</script'; ?>
 >
 </head>
 <body>
