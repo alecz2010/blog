@@ -6,6 +6,7 @@
  * Time: 5:14 PM
  */
 
+$config = new stdClass();
 
 $config->navMenu = array(
     'navBtn' => array(
@@ -24,7 +25,10 @@ $config->navMenu = array(
     ),
 );
 
-$GLOBALS['config'] = $config;
+
+
+
+
 
 //namespace Config;
 //

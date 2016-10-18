@@ -22,6 +22,6 @@ class mysql
         }
 
         $connect->close();
-
+        return $connect;
     }
 }
