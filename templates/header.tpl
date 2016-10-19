@@ -17,10 +17,8 @@
                 <a class="navbar-brand" href="#">{$title}</a>
             </div>
             <ul class="nav navbar-nav">
-                {foreach $navBtn as $navUrl}
-                    {strip}
-                        <li><a href="{$navUrl.url}">{$navUrl.page}</a></li>
-                    {/strip}
+                {foreach from=$x key=k item=v}
+                    <li><a href="{$v}">{$k}</a></li>
                 {/foreach}
             </ul>
         </div>

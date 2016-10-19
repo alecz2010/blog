@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-10-18 16:22:35
+/* Smarty version 3.1.30, created on 2016-10-19 15:26:02
   from "C:\xampp\htdocs\blog\templates\header.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5806302b15e366_39793063',
+  'unifunc' => 'content_5807746ae44c46_42593138',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3371232e11f5873e01d4821c68a39262aea06fa5' => 
     array (
       0 => 'C:\\xampp\\htdocs\\blog\\templates\\header.tpl',
-      1 => 1476800554,
+      1 => 1476883544,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5806302b15e366_39793063 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5807746ae44c46_42593138 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <html>
 <head>
@@ -50,12 +50,12 @@ function content_5806302b15e366_39793063 (Smarty_Internal_Template $_smarty_tpl)
             </div>
             <ul class="nav navbar-nav">
                 <?php
-$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['navBtn']->value, 'navUrl');
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['x']->value, 'v', false, 'k');
 if ($_from !== null) {
-foreach ($_from as $_smarty_tpl->tpl_vars['navUrl']->value) {
+foreach ($_from as $_smarty_tpl->tpl_vars['k']->value => $_smarty_tpl->tpl_vars['v']->value) {
 ?>
-                    <li><a href="<?php echo $_smarty_tpl->tpl_vars['navUrl']->value['url'];?>
-"><?php echo $_smarty_tpl->tpl_vars['navUrl']->value['page'];?>
+                    <li><a href="<?php echo $_smarty_tpl->tpl_vars['v']->value;?>
+"><?php echo $_smarty_tpl->tpl_vars['k']->value;?>
 </a></li>
                 <?php
 }

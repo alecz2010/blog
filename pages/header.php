@@ -9,7 +9,8 @@ require_once 'config/config.php';
 
 $smarty = new Smarty();
 
+$config = new config();
 
-$smarty->assign($config->navMenu);
+$smarty->assign('x', $config->menu());
 
 $smarty->display('header.tpl');

@@ -6,25 +6,35 @@
  * Time: 5:14 PM
  */
 
-$config = new stdClass();
+class config
+{
+    public static function connection()
+    {
+        DEFINE('localhost', 'localhost');
+        DEFINE('user', 'root');
+        DEFINE('password', '');
+        DEFINE('db', 'register');
 
-$config->navMenu = array(
-    'navBtn' => array(
-        array(
-            'page' => 'Home',
-            'url' => '/',
-        ),
-        array(
-            'page' => 'Contact',
-            'url' => '/contact',
-        ),
-        array(
-            'page' => 'Map',
-            'url' => '/map',
-        ),
-    ),
-);
+        $connect = new mysqli(localhost, user, password, db);
 
+        if ($connect->connect_error) {
+            die('Connect Error ' . mysqli_connect_errno() . mysqli_connect_error());
+        }
+        return $connect;
+    }
+
+    public function menu()
+    {
+        $config = new stdClass();
+
+        $config->navMenu = array(
+           'Home' => '/',
+           'Contact' => '/contact',
+           'Map' => '/map'
+        );
+        return $config->navMenu;
+    }
+}
 
 
 
