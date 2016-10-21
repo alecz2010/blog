@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-10-21 14:55:05
+/* Smarty version 3.1.30, created on 2016-10-21 16:32:00
   from "C:\xampp\htdocs\blog\templates\header.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_580a1029637d69_28014558',
+  'unifunc' => 'content_580a26e0ce9562_06979326',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3371232e11f5873e01d4821c68a39262aea06fa5' => 
     array (
       0 => 'C:\\xampp\\htdocs\\blog\\templates\\header.tpl',
-      1 => 1477054385,
+      1 => 1477060319,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_580a1029637d69_28014558 (Smarty_Internal_Template $_smarty_tpl) {
+function content_580a26e0ce9562_06979326 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <html>
 <head>
@@ -38,6 +38,9 @@ function content_580a1029637d69_28014558 (Smarty_Internal_Template $_smarty_tpl)
 >
     <?php echo '<script'; ?>
  src="public/js/Registration.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="public/js/Contact.js"><?php echo '</script'; ?>
 >
 </head>
 <body>

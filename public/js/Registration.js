@@ -1,5 +1,5 @@
 
-var Registration = Registration|| {};
+var Registration = Registration || {};
 
 Registration.Insert = function(){
     var $form = $('form');
@@ -25,6 +25,5 @@ Registration.Insert = function(){
 
     $registerBtn.on('click', insertUser);
 };
-
 
 

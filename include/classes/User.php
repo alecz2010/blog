@@ -13,7 +13,7 @@ class User
 {
     public static function insertData($formInput) {
         $db = config::connection();
-        $resp = $db->query("INSERT INTO `register` (`username`) VALUES ('" . $formInput['username'] ."')");
+        $resp = $db->query("INSERT INTO `register` (`username`,`password`) VALUES ('" . $formInput['username'] . "','" . md5($formInput['password']) . "')");
         if ($db->affected_rows > 0){
             return true;
         }

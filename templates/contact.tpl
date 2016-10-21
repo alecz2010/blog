@@ -11,5 +11,8 @@
         <label for="pwd">Re-Password:</label>
         <textarea class="form-control" name="input[text]" rows="5" id="comment"></textarea>
     </div>
-    <button type="button" class="btn btn-default" id="registerBtn">Register</button>
+    <button type="button" class="btn btn-default" id="sentBtn">Sent</button>
+    <script>
+        new Contact.Sent();
+    </script>
 </form>
