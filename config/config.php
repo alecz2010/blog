@@ -28,55 +28,11 @@ class config
         $config = new stdClass();
 
         $config->navMenu = array(
-           'Home' => '/',
-           'Contact' => '/contact',
-           'Map' => '/map'
+            'Home' => './',
+            'Contact' => '?page=contact',
+            'Map' => '?page=map',
+            'Register' => '?page=register'
         );
         return $config->navMenu;
     }
 }
-
-
-
-
-
-//namespace Config;
-//
-//class Config {
-//    private function __construct()
-//    {
-//        //path
-//        if(!define('confPath')){
-//            define('confPath', '/config/');
-//        }
-//
-//
-//    }
-//
-//    public function header()
-//    {
-//        //Menu header
-//        $menu = array(
-//            'navBtn' => array(
-//                array(
-//                    'page' => 'Home',
-//                    'url' => '/',
-//                ),
-//                array(
-//                    'page' => 'Contact',
-//                    'url' => '/contact',
-//                ),
-//                array(
-//                    'page' => 'Map',
-//                    'url' => '/map',
-//                ),
-//            ),
-//        );
-//
-//        return $menu;
-//    }
-//
-//
-//
-//
-//}

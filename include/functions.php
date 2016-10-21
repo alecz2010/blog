@@ -6,8 +6,35 @@
  * Time: 4:41 PM
  */
 
-function getCurrentPage()
+class Application
 {
-    $page = $_GET['page'];
-    return $page;
+    public function getCurrentPage() {
+        $page = '';
+        if (!empty($_GET['page'])) {
+            $page = $_GET['page'];
+        }
+        return $page;
+    }
+
+    public static function __autoload($class_name)
+    {
+        $filename = str_replace('\\', DIRECTORY_SEPARATOR, $class_name) . '.php';
+
+        $file = CLASS_PATH . $filename;
+        if (!file_exists($file)) {
+            return FALSE;
+        }
+        require_once $file;
+    }
+
+    public function pageExist()
+    {
+        if (empty(self::getCurrentPage())) {
+            $_GET['page'] = 'home';
+        } else if (!file_exists('./pages/' . self::getCurrentPage() . '.php')) {
+            $_GET['page'] = '404';
+        }
+
+        include('pages/' . self::getCurrentPage() . '.php');
+    }
 }
