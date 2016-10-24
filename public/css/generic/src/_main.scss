@@ -4,5 +4,17 @@ body {
 }
 
 .register {
-  width: 300px;
+  width: 400px;
+  margin: 30px auto 0;
+  text-align: center;
 }
+
+.contact {
+  width: 400px;
+  margin: 30px auto 0;
+  text-align: center;
+  textarea {
+    resize: vertical;
+  }
+}
+

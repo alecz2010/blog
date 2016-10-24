@@ -37,4 +37,5 @@ class Application
 
         include('pages/' . self::getCurrentPage() . '.php');
     }
+
 }
