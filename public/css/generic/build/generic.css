@@ -12,6 +12,10 @@ body {
   margin: 30px auto 0;
   text-align: center; }
   .contact textarea {
-    resize: vertical; }
+    resize: vertical;
+    min-height: 150px; }
+
+.has-error {
+  border-color: 1px solid red; }
 
 /*# sourceMappingURL=generic.css.map */

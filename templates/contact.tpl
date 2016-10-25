@@ -1,22 +1,21 @@
 <div class="contact">
     <form class="send-contact">
         <div class="form-group">
-            <label for="usr">Name:</label>
-            <input type="text" name="input[name]" class="form-control input" id="name">
+            <input type="text" name="input[name]" class="form-control input" placeholder="Your name" id="name">
         </div>
         <div class="form-group">
-            <label for="pwd">Email:</label>
-            <input type="password" name="input[email]" class="form-control input" id="email">
+            <input type="password" name="input[email]" class="form-control input" placeholder="Your email address" id="email">
         </div>
         <div class="form-group">
-            <label for="pwd">Re-Password:</label>
-            <textarea class="form-control input" name="input[text]" rows="5" id="comment"></textarea>
+            <textarea class="form-control input" name="input[text]" rows="5" placeholder="Message" id="comment"></textarea>
         </div>
-        <button type="button" class="btn btn-default" id="sendBtn">Sent</button>
+        <button type="button" class="btn btn-primary" id="sendBtn">SEND</button>
         <div class="message"></div>
     </form>
-    <button type="button" class="btn btn-default" id="backBtn">Back</button>
-    <p class="details"><span style='color:#3e8f3e;text-align:center'>Successfuly Sent.</span></p>
+    <div class="back hide">
+        <img src="http://timbergrove.com/assets/xicon-contact-success-d2727d4f41f54eb503c74f3b1216056d.png.pagespeed.ic.cFVpo2R7Dn.png" style="width:200px;height:200px" />
+        <br><button type="button" class="btn btn-primary" id="backBtn">BACK</button>
+    </div>
     <script>
         new Contact.Sent();
     </script>

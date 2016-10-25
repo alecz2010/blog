@@ -19,8 +19,8 @@ class Ajax
         header('Content-type: application/json');
         echo json_encode(
             array(
-                'code' => $code;
-                'res' => $response;
+                'code' => $code,
+                'res' => $response
             )
         );
         exit();

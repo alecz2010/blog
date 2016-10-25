@@ -8,4 +8,14 @@ java -jar yuicompressor-2.4.8pre.jar %pbl%\css\generic\build\generic.css -o %pbl
 gzip.exe -f -n -k -7 %pbl%\css\generic\build\generic.min.css
 del %pbl%\css\generic\build\generic.min.css
 move %pbl%\css\generic\build\generic.min.css.gz %pbl%\css\generic\generic.gz.css
+
+:: generic js
+echo Building generic.gz.js
+SET pth=%pbl%\js\generic
+merger %pth%\build\generic.js %pth%\src\ModalBuilder.js
+java -jar compiler.jar --compilation_level SIMPLE_OPTIMIZATIONS --language_in ECMASCRIPT5 --js %pth%\build\generic.js --js_output_file %pth%\build\generic.min.js
+gzip.exe -f -n -k -7 %pth%\build\generic.min.js
+del %pth%\build\generic.min.js
+move %pth%\build\generic.min.js.gz %pth%\generic.gz.js
+
 pause
