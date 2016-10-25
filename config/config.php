@@ -31,7 +31,8 @@ class config
             'Home' => './',
             'Contact' => '?page=contact',
             'Map' => '?page=map',
-            'Register' => '?page=register'
+            'Register' => '?page=register',
+            'Login' => '?page=login'
         );
         return $config->navMenu;
     }

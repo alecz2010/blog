@@ -13,12 +13,19 @@ class User
 {
     public static function insertData($formInput) {
         $db = config::connection();
-        $resp = $db->query("INSERT INTO `register` (`username`,`password`) VALUES ('" . $formInput['username'] . "','" . md5($formInput['password']) . "')");
-        if ($db->affected_rows > 0){
+        $db->query("INSERT INTO `register` (`username`,`password`) VALUES ('" . $formInput['username'] . "','" . md5($formInput['password']) . "')");
+        if ($db->affected_rows > 0) {
             return true;
         }
 
         return false;
+    }
+    public static function loginData($formInput) {
+        $db = config::connection();
+        $db->query("SELECT * FROM `register` WHERE username='" . $formInput['username'] . "' AND password='" . $formInput['password'] . "'");
+        if ($db->affected_rows > 0) {
+            return true;
+        }
     }
 }
 

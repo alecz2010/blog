@@ -15,6 +15,11 @@ body {
     resize: vertical;
     min-height: 150px; }
 
+.login {
+  width: 400px;
+  margin: 30px auto 0;
+  text-align: center; }
+
 .has-error {
   border-color: 1px solid red; }
 
