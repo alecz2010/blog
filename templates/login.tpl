@@ -10,7 +10,7 @@
         <button type="button" class="btn btn-primary" id="loginBtn">Login</button>
     </form>
     <script>
-        new Login.Data();
+//        new Generic.Data();
     </script>
 </div>
 {/strip}

@@ -1,7 +1,7 @@
 
-var Registration = Registration || {};
+window.Registration = window.Registration || {};
 
-Registration.Insert = function(){
+Generic.Insert = function(){
     var $form = $('form');
     var $registerBtn = $('#registerBtn');
 

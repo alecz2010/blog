@@ -18,7 +18,7 @@
             <br><button type="button" class="btn btn-primary" id="backBtn">BACK</button>
         </div>
         <script>
-            new Contact.Sent();
+            new Generic.Contact();
         </script>
     </div>
 {/strip}

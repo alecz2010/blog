@@ -3,9 +3,9 @@
  */
 
 
-var Contact = Contact || {};
+window.Generic = Generic || {};
 
-Contact.Sent = function() {
+Generic.Contact = function() {
     var response =  true;
     var $cont = $('.contact');
     var $form = $cont.find('form');
@@ -16,7 +16,7 @@ Contact.Sent = function() {
     var comment = $form.find('#comment').val();
     var $inputWithError;
 
-    var sendContact = function(){
+    var send = function(){
         $.ajax({
             type: "POST",
             url: "./pages_ajax/contact.php",
@@ -74,7 +74,7 @@ Contact.Sent = function() {
             return false;
         }
 
-        sendContact();
+        send();
     });
 };
 

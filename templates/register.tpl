@@ -15,6 +15,6 @@
         <button type="button" class="btn btn-default" id="registerBtn">Register</button>
     </form>
     <script>
-        new Registration.Insert();
+        new Generic.Insert();
     </script>
 {/strip}
