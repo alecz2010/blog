@@ -9,6 +9,7 @@
     <script src="public/js/bootstrap.min.js"></script>
     <script src="public/js/Registration.js"></script>
     <script src="public/js/Contact.js"></script>
+    <script src="public/js/Login.js"></script>
     {*<script src="public/js/generic/build/generic.js"></script>*}
     <script src="public/js/generic/src/ModalBuilder.js"></script>
 </head>

@@ -22,7 +22,7 @@ class User
     }
     public static function loginData($formInput) {
         $db = config::connection();
-        $db->query("SELECT * FROM `register` WHERE username='" . $formInput['username'] . "' AND password='" . $formInput['password'] . "'");
+        $db->query("SELECT * FROM `register` WHERE username='" . $formInput['username'] . "' AND password='" . md5($formInput['password']) . "'");
         if ($db->affected_rows > 0) {
             return true;
         }

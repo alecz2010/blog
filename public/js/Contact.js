@@ -26,7 +26,6 @@ Contact.Sent = function() {
             },
             success: function(resp) {
                 if (resp.res == "success"){
-                    // console.log('aaa', $form.attr('class'));
                     $form.removeClass('show');
                     $form.addClass('hide');
                     $form.parent().append($back);

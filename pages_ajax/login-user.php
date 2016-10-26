@@ -12,6 +12,7 @@ require_once APPLICATION_PATH . '/config/config.php';
 $inputs = $_POST['input'];
 
 Application::__autoload('User');
+
 $result = User::loginData($inputs) ? "success" : "failed";
 
 Ajax::output($result);
