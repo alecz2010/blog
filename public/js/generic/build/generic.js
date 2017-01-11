@@ -6,6 +6,10 @@
  * Created by Alex on 10/24/2016.
  */
 
+/**
+ * Created by Tibor on 10/14/2016.
+ */
+
 window.Generic = window.Generic || {};
 
 (function($) {
@@ -152,40 +156,39 @@ Generic.Contact = function() {
  * Created by Alex on 10/25/2016.
  */
 
-window.Login = window.Login || {};
+window.Generic = window.Generic || {};
+(function ($) {
+    Generic.Login = function(){
+        var $login = $('.login');
+        var $form = $login.find('form');
+        var $loginBtn = $form.find('#loginBtn');
 
-Generic.Data = function(){
-    var $login = $('.login');
-    var $form = $login.find('form');
-    var $loginBtn = $form.find('#loginBtn');
+        var loginData = function(){
+            $.ajax({
+                type: "POST",
+                url: "./pages_ajax/login-user.php",
+                data: $form.serialize(),
+                complete: function() {
 
-    var loginData = function(){
-        $.ajax({
-            type: "POST",
-            url: "./pages_ajax/login-user.php",
-            data: $form.serialize(),
-            complete: function() {
-
-            },
-            success: function(resp) {
-                if (resp.res == "success") {
-                    alert("success");
-                } else {
-                    alert("error");
+                },
+                success: function(resp) {
+                    if (resp.res == "success") {
+                        alert("success");
+                    } else {
+                        alert("error");
+                    }
+                    clearInput($form);
                 }
-                clearInput($form);
-            }
-        });
+            });
+        };
+
+        var clearInput = function($inputs) {
+            $inputs.find(':input').val('');
+        };
+
+        $loginBtn.on('click',loginData);
     };
-
-    var clearInput = function($inputs) {
-        $inputs.find(':input').val('');
-    };
-
-    $loginBtn.on('click',loginData);
-};
-
-
+})(window.jQuery);
 
 
 
@@ -193,35 +196,43 @@ Generic.Data = function(){
 // ..\..\public\js\generic\src\Registration.js
 */
 
+var Generic = window.Generic = window.Generic || {};
 
-window.Registration = window.Registration || {};
-
-Generic.Insert = function(){
+Generic.Insert = function () {
     var $form = $('form');
     var $registerBtn = $('#registerBtn');
 
-    var insertUser = function(){
+    var handleError = function($form, errors) {
+        for (var key in errors) {
+            (function () {
+                var $input = $form.find('input[name="' + key + '"]');
+                $input.after('<span>' + errors[key] + '</span>');
+            })();
+        }
+    };
+
+    var insertUser = function () {
         $.ajax({
             type: 'POST',
             url: './pages_ajax/insert-user.php',
             data: $form.serialize(),
             complete: function() {
-
+                // loader
             },
             success: function(resp) {
-                if (resp.res == 'success') {
-                    alert("Account created.");
-                }else{
-                    alert("Error");
+                var errors = resp.res.errors;
+                if (errors) {
+                    handleError($form, errors);
                 }
             },
         });
     };
 
-    $registerBtn.on('click', insertUser);
+    $registerBtn.on('click', function () {
+        console.log('here');
+        insertUser();
+    });
 };
-
-
 
 
 

@@ -9,10 +9,22 @@
 require_once '../init.php';
 require_once APPLICATION_PATH . '/config/config.php';
 
-$inputs = $_POST['input'];
+$username = $_POST['username'];
+$password = $_POST['password'];
 
 Application::__autoload('User');
 
-$result = User::loginData($inputs) ? "success" : "failed";
+$errors = User::validateInputs($username, $password);
 
-Ajax::output($result);
+if (empty($errors)) {
+    $password = User::encryptPassword($password);
+    $user = User::checkUserCredentials($username, $password);
+
+    if ($user) {
+        Ajax::output($user);
+    }
+
+    $errors[] = 'User doesn\'t exist in our database!';
+}
+
+Ajax::outputError($errors);

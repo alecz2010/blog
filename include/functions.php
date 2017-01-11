@@ -27,7 +27,14 @@ class Application
         require_once $file;
     }
 
-    public function pageExist()
+    public static function escape($escape) {
+        $db = config::connection();
+        $escape = mysqli_real_escape_string($db,$escape);
+
+        return $escape;
+    }
+
+    public static function pageExist()
     {
         if (empty(self::getCurrentPage())) {
             $_GET['page'] = 'home';

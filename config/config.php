@@ -10,12 +10,12 @@ class config
 {
     public static function connection()
     {
-        DEFINE('localhost', 'localhost');
-        DEFINE('user', 'root');
-        DEFINE('password', '');
-        DEFINE('db', 'register');
+        $host = 'localhost';
+        $user = 'root';
+        $pass = '';
+        $db = 'register';
 
-        $connect = new mysqli(localhost, user, password, db);
+        $connect = new mysqli($host, $user, $pass, $db);
 
         if ($connect->connect_error) {
             die('Connect Error ' . mysqli_connect_errno() . mysqli_connect_error());
